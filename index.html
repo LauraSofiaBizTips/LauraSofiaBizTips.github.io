@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tienda de Productos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-bg {
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div>
+                <a href="#" class="text-2xl font-bold text-gray-800">Tienda de Productos</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-800 hover:text-gray-600">Inicio</a>
+                <a href="#products" class="text-gray-800 hover:text-gray-600">Productos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bienvenida -->
+    <header class="hero-bg text-white text-center py-32">
+        <div class="bg-black bg-opacity-60 py-20 px-6">
+            <h1 class="text-5xl font-extrabold mb-4 animate__animated animate__fadeInDown">Bienvenido a Nuestra Tienda de Productos</h1>
+            <p class="text-2xl mb-6 animate__animated animate__fadeInUp">Encuentra los mejores productos aquí</p>
+            <a href="#products" class="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition animate__animated animate__pulse animate__infinite">Explorar Productos</a>
+        </div>
+    </header>
+
+    <!-- Sección de productos -->
+    <section id="products" class="py-16 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Nuestros Productos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Tarjeta de producto -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
+                    <img src="product1.jpg" alt="Producto 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Producto 1</h3>
+                        <p class="text-gray-600 mb-4">Descripción del Producto 1</p>
+                        <div class="text-gray-800 font-bold mb-4">$10.00</div>
+                        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Comprar</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de producto -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
+                    <img src="product2.jpg" alt="Producto 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Producto 2</h3>
+                        <p class="text-gray-600 mb-4">Descripción del Producto 2</p>
+                        <div class="text-gray-800 font-bold mb-4">$20.00</div>
+                        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Comprar</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de producto -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
+                    <img src="product3.jpg" alt="Producto 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Producto 3</h3>
+                        <p class="text-gray-600 mb-4">Descripción del Producto 3</p>
+                        <div class="text-gray-800 font-bold mb-4">$30.00</div>
+                        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lugar para el logo -->
+    <div class="flex justify-center my-12">
+        <img src="logo.png" alt="Logo de la Tienda" class="h-24">
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto text-center">
+            <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+                <div class="mb-4 lg:mb-0">
+                    <a href="#" class="text-2xl font-bold">Tienda de Productos</a>
+                </div>
+                <div class="mb-4 lg:mb-0">
+                    <p>&copy; 2024 Tienda de Productos. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex justify-center lg:justify-end space-x-4">
+                    <a href="#" class="hover:text-gray-400 transition">Política de Privacidad</a>
+                    <a href="#" class="hover:text-gray-400 transition">Términos de Servicio</a>
+                    <a href="#" class="hover:text-gray-400 transition">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Script para hacer el nav responsive -->
+    <script>
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                nav.classList.add('fixed', 'top-0', 'w-full', 'z-10', 'bg-white', 'shadow-lg');
+            } else {
+                nav.classList.remove('fixed', 'top-0', 'w-full', 'z-10', 'bg-white', 'shadow-lg');
+            }
+        });
+    </script>
+
+</body>
+</html>
